@@ -21,3 +21,5 @@ print(a.title())
 Piter = "Pidr"
 print(name.title() + Piter)
 #comment print name title+Piter
+name = "Vladimir"
+print(name)
