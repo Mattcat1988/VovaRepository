@@ -5,3 +5,4 @@ uname -a
 ifconfig
 uptime
 sudo apt update
+curl vk.com
