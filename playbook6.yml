@@ -1,0 +1,59 @@
+---
+- name: Install apache and upload my web page
+  hosts: all
+  become: yes
+
+  vars:
+    source_folder: ./MyWebSite2
+    destin_folder: /var/www/html
+
+  tasks:
+
+  - name: Check linux system   
+    debug: var=ansible_os_family
+ 
+
+
+  - block: # =======Block for RedHat=======
+
+      - name: Install Apache Web Server RedHat
+        yum: name=httpd state=latest
+
+
+      - name: Start WebServer and make it enable boot RedHat
+        service: name=httpd state=started enabled=yes
+
+    when: ansible_os_family == "RedHat"
+
+  - block:  #===block for ubuntu====
+
+      - name: Start WebServer service for Debian
+        service: name=apache2 state=started enabled=yes
+        
+      - name: Install Apache Web Server for Ubuntu
+        apt: name=apache2 state=latest
+
+    when: ansible_os_family == "Debian"
+
+  - name: Copy MyhomePAge to Servers
+    copy: src={{ item }} dest={{ destin_folder }} mode=0555
+    with_fileglob: "{{ source_folder }}/*.*"
+
+#    loop:
+ #      - "index.html"
+  #     - "index23"
+   #    - "neprivet.txt"
+    #   - "prison.txt"
+    notify:
+       - Restart Apache RedHat
+       - Restart Apache Debian
+
+
+  handlers:
+  - name: Restart Apache RedHat
+    service: name=httpd state=restarted
+    when: ansible_os_family == "RedHat"
+
+  - name: Restart Apache Debian
+    service: name=apache2 state=restarted
+    when: ansible_os_family == "Debian"
