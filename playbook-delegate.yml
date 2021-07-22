@@ -1,0 +1,12 @@
+---
+- name: test playbook
+  hosts: all
+  become: yes
+
+  vars:
+   mytext: "Privet"
+
+  tasks:
+  - name: Info server
+    shell: echo This is server {{ inventory_hostname }} was deregistered from our LB, node name is {{ ansible_nodename }} >> /home/log.txt
+    delegate_to: centOS
