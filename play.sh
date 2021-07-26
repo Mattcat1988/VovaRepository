@@ -6,3 +6,4 @@ ifconfig
 uptime
 sudo apt update
 curl vk.com
+ls -la
