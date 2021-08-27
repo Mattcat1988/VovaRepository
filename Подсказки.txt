@@ -1,0 +1,48 @@
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+pbcopy копировать в буфер обмена
+
+sudo ALL=(ALL:ALL) NOPASSWD:ALL
+sudo -s перейтив root
+ctrl+w найти
+ufw фаервол
+sudo ufw status статус фаервола
+sudo ufw app list Список приложений с которыми работает ФВ
+/etc/ufw/applications.d/nginx.ini документ куда снипет вставлять для работы ВФ и nginx
+[Nginx HTTP]
+title=Web Server
+description=Enable NGINX HTTP traffic
+port=80/tcp
+
+[Nginx HTTPS] \
+title=Web Server (HTTPS) \
+description=Enable NGINX HTTPS traffic
+ports=443/tcp
+
+[Nginx Full]
+title=Web Server (HTTP,HTTPS)
+description=Enable NGINX HTTP and HTTPS traffic
+ports=80,443/tcp
+
+======= Конфиг для Nginx Рабочий =======
+user www-data;
+worker_processes auto;
+events {} обязательно эта хрень нужна
+http { }
+gzip on; Архиватор
+server { } блок сервера
+listen 80; на каком порту работает
+server_name localhost; Имя сервера
+root корень сайта
+access_log off; Отключить логирования при доступе к сайту
+location /text {
+        alias /sites/www/mytext/text.txt; это прямая ссылка на сайт
+        #root /sites/www/mytext; изменяет корень сайта
+        #try_files $uri =404; какая то директива
+      } Тоже важный блок
+
+access_log /var/log/nginx/access.log; доспум к логам
+error_log /var/log/nginx/error.log; доступ к логам
+include mime.types; подянуть поддержку html txt png и прочее говно.
+return 200 'this is call of duty'; вернуть с кодом 200
