@@ -46,3 +46,9 @@ access_log /var/log/nginx/access.log; доспум к логам
 error_log /var/log/nginx/error.log; доступ к логам
 include mime.types; подянуть поддержку html txt png и прочее говно.
 return 200 'this is call of duty'; вернуть с кодом 200
+
+========= Команды Гита ========
+git init . локальный гит
+git add . добавить все или один файл в репу
+git commit -m "message" добавить коммит на файл
+git push запушить всё это в облако гита
