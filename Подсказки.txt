@@ -61,4 +61,9 @@ git config --global user.name "Vladimir Babushkin"
 git config --global user.email "my mail"
 git config -l все конфигурации гита
 .gitconfig файл с настройками
-
+git status  статус гита
+git log история гита git log -1 последний коммит
+git log -1 -p показать что было сделано
+git checkout -- <имя файла> отменить изменения
+git diff --staged разница между staged и последним коммитом
+.gitignore прописать то что надо игнорировать
