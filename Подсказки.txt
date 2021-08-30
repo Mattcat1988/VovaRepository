@@ -98,5 +98,15 @@ sudo yum install ansible установка ansible CentOs
 ansible --version версия Ансибл
 sudo apt-add-repository ppa:ansible/ansible добавить репозиторий на Ubuntu
 sudo apt install ansible установка ansible Ubuntu
-
-
+mkdir ansible создать папку для проекта
+nano hosts.txt
+[staging_servers]
+centOS      ansible_host=192.168.20.98 пример содержимого файла hosts.txt ansible_ssh_private_key_file=/home...
+nano ansible.cfg файл конфига
+[defaults]
+host_key_checking = false  отмена проверки отпечатка пальца
+inventory         = ./hosts.txt
+root ALL=NOPASSWD: ALL
+ansible ansible all -m ping пинг на все сервера
+ansible-inventory --list список файла hosts.txt
+ansible-inventory --graph так же
