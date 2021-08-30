@@ -92,3 +92,11 @@ git reset --hard HEAD~2 Полностью вернуться на две пре
 git reset --soft HEAD~4 удалить commit, не изменяя файлы
 git push --set-upstream origin создать свою ветку в github удалённо
 git push origin --delete <banch name> Удалить ветку удалённо
+==========Ansible=========
+sudo yum install epel-release скачать репозиторий CentOS
+sudo yum install ansible установка ansible CentOs
+ansible --version версия Ансибл
+sudo apt-add-repository ppa:ansible/ansible добавить репозиторий на Ubuntu
+sudo apt install ansible установка ansible Ubuntu
+
+
