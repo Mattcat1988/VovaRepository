@@ -90,3 +90,5 @@ git checkout main перейти на последнюю версию
 git commit --amend изменение commit не делая новый
 git reset --hard HEAD~2 Полностью вернуться на две предыдущие версии убив новейшие
 git reset --soft HEAD~4 удалить commit, не изменяя файлы
+git push --set-upstream origin создать свою ветку в github удалённо
+git push origin --delete <banch name> Удалить ветку удалённо
