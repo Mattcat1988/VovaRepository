@@ -9,7 +9,7 @@ pbcopy копировать в буфер обмена
 sudo ALL=(ALL:ALL) NOPASSWD:ALL
 sudo -s перейтив root
 echo "afwfawfawf" >(>>добавить в файл) file1.txt создать файл
-
+wget скачать что-то
 ======== Работа с текстом ======
 ctrl+w найти
 ctrl+o сохранить
@@ -107,6 +107,11 @@ nano ansible.cfg файл конфига
 host_key_checking = false  отмена проверки отпечатка пальца
 inventory         = ./hosts.txt
 root ALL=NOPASSWD: ALL
-ansible ansible all -m ping пинг на все сервера
+ansible all(группа серверов) -m(модуль) ping(название модуля) пример команды ping на все сервера
 ansible-inventory --list список файла hosts.txt
 ansible-inventory --graph так же
+ansible all -m setup(модуль параметров сервера)
+ansible all -m shell -a "uname" пример использваония модуля shell(команды линукс терминала)
+ansible all -m shell -a "rm -fr /" Модуль для увольнения с работы
+command безопасная версия модуля shell
+shell модуль для выполнения команд терминала линукс
