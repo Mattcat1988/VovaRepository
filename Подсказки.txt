@@ -118,3 +118,5 @@ ansible all -m shell -a "uname" пример использваония моду
 ansible all -m shell -a "rm -fr /" Модуль для увольнения с работы
 command безопасная версия модуля shell
 shell модуль для выполнения команд терминала линукс
+-a(аргумент)
+copy
