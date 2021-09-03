@@ -126,7 +126,7 @@ ansible all -m file -a "path=/home/privet.txt state=absent" -b пример уд
 ansible all -m copy -a "src=privet.txt dest=/home mode=777" -b пример копирования файла
 get_url скачать что-то по ссылке
 ansible all -m get_url -a "url="https://anydesk.com/ru/downloads/linux dest=/home/vladimir" Пример скачивания
-yum apt модуль для установки программ
+yum модуль для установки программ
 ansible all -m yum -a "name=gimp state=latest" -b пример установки программы
 ansible all -m yum -a "name=gimp state=removed" -b пример удаления программы
 service позволяет управлять сервисами
