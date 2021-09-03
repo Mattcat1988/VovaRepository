@@ -1,5 +1,5 @@
 --- 
- - name: Ping server
+ - name: Install application
    hosts: prod_servers
    become: yes
 
