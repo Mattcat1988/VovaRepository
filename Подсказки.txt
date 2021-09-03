@@ -11,6 +11,7 @@ sudo ALL=(ALL:ALL) NOPASSWD:ALL
 sudo -s перейтив root
 echo "afwfawfawf" >(>>добавить в файл) file1.txt создать файл
 wget скачать что-то
+usermod -aG sudo sammy добавить пользователя в группу sudo
 
 ======== Работа с текстом ======
 ctrl+w найти
