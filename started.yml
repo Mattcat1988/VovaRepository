@@ -1,0 +1,13 @@
+--- 
+ - name: Ping server
+   hosts: prod_servers
+   become: yes
+
+   tasks:
+
+     - name: install gimp
+       yum: name=gimp state=latest
+
+
+
+
