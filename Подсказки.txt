@@ -122,11 +122,21 @@ command безопасная версия модуля shell
 shell модуль для выполнения команд терминала линукс
 file модуль для создания или удаления файлов, создание директории и тд
 copy копирование файла
+=======Прочее========
+-m модуль
+-a(аргумент)
+-b become  быть sudo
+-v verbose дать больше информации
+src=источник
+dest=назначение
+path=путь
+state=absent удаление файла или программы state=removed
+
 ansible all -m file -a "path=/home/privet.txt state=absent" -b пример удаления файла
 ansible all -m copy -a "src=privet.txt dest=/home mode=777" -b пример копирования файла
 get_url скачать что-то по ссылке
 ansible all -m get_url -a "url="https://anydesk.com/ru/downloads/linux dest=/home/vladimir" Пример скачивания
-yum модуль для установки программ
+yum RedHat apt Debian модуль для установки программ
 ansible all -m yum -a "name=gimp state=latest" -b пример установки программы
 ansible all -m yum -a "name=gimp state=removed" -b пример удаления программы
 service позволяет управлять сервисами
@@ -138,17 +148,18 @@ vars: переменные для playbook
 src={{ source_file }} dest= {{ destin_file }} пример использования переменных в playbook
 handlers: Дополнительный таск в случае срабатывания notify
 notify: способ вызова handlers
+ - name: Copy Index.html to web
+   copy: src={{ source_file }} dest={{ destin_file}}
+   notyfy: Restart Apache
+Пример использования notify, перезапуск веб сервера если изменилось содержимое index
+
 - debug: выдать сообщение var: использовать параметр переменной msg: сообщение
 - set_fact: объеденить переменные
 при использовании var не использовать фигурные скобки. если используется переменная, нужны скобки
 register: сохранить output команды
-
--m модуль
--a(аргумент)
--b become  быть sudo
--v verbose дать больше информации
-src=источник
-dest=назначение
-path=путь
-state=absent удаление файла или программы state=removed
+when: Условие(можно поставить в конце block)
+ - name: Install apache
+   apt: name=apache2 state=latest
+   when: ansible_os_family == "Debian"
+- block Блоки
 
