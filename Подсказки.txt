@@ -133,7 +133,9 @@ path=путь
 state=absent удаление файла или программы state=removed
 
 ansible all -m file -a "path=/home/privet.txt state=absent" -b пример удаления файла
+state: directory  для создания директории в playbook
 ansible all -m copy -a "src=privet.txt dest=/home mode=777" -b пример копирования файла
+content: содержание файлов при использовании модуля copy
 get_url скачать что-то по ссылке
 ansible all -m get_url -a "url="https://anydesk.com/ru/downloads/linux dest=/home/vladimir" Пример скачивания
 yum RedHat apt Debian модуль для установки программ
@@ -184,4 +186,10 @@ template: сгенерировать из шаблона
 - name: Generate Index.html file
   template: src={{ source_folder }}/index.j2 dest={{ destin_folder }}/index.html
 ansible-galaxy init <название роли> команда для создания ролей
+roles: указать вместо tasks, при использовании ролей, указать роль
+roles:
+ - { role: install_apt, when: ansible_system == 'Linux' } запускать роль, если ОС Линукс
+hosts: "{{ myhosts }}" для использования внешних переменных
+--extra-var "myhosts=prod_servers" использование внейшней переменной. Наивысший приоритет
+include: <file name> импорт файла. Изначально создать файл с параметрами
 
