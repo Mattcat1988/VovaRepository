@@ -179,9 +179,9 @@ until конечный цикл
   retries: 10
   until: output.stdout.find("ZZZZ") == false
 with_fileglob: "{{ source_folder }}/*.*" скопировать всё содержимое папки
-index.j2 создание шаблона
+index.j2 создание шаблона в шаблоне используются переменные ansible
 template: сгенерировать из шаблона
 - name: Generate Index.html file
-  template: src={{ source_folder }}/index.j2 dest={{ destin_folder }}
-
+  template: src={{ source_folder }}/index.j2 dest={{ destin_folder }}/index.html
+ansible-galaxy init <название роли> команда для создания ролей
 

@@ -1,0 +1,12 @@
+---
+- name: update system Debian
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: update system
+      apt: update_cache=yes force_apt_get=yes
+      register: output
+
+    - debug:
+        var: output
