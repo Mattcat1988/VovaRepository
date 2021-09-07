@@ -162,4 +162,26 @@ when: Условие(можно поставить в конце block)
    apt: name=apache2 state=latest
    when: ansible_os_family == "Debian"
 - block Блоки
+{{ item }} переменная, сохранённое слово
+loop: цикл task
+ -name: Install many packaged
+    yum: name={{ item }} state=latest
+    loop:
+      - gimp
+      - tree
+      - mc
+
+until конечный цикл
+- name: Loop Until example
+  shell: echo -n Z >> myfile.txt && cat myfile.txt
+  register: output
+  delay: 2
+  retries: 10
+  until: output.stdout.find("ZZZZ") == false
+with_fileglob: "{{ source_folder }}/*.*" скопировать всё содержимое папки
+index.j2 создание шаблона
+template: сгенерировать из шаблона
+- name: Generate Index.html file
+  template: src={{ source_folder }}/index.j2 dest={{ destin_folder }}
+
 
