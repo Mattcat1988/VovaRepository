@@ -192,4 +192,7 @@ roles:
 hosts: "{{ myhosts }}" для использования внешних переменных
 --extra-var "myhosts=prod_servers" использование внейшней переменной. Наивысший приоритет
 include: <file name> импорт файла. Изначально создать файл с параметрами
-
+delegate_to: передать выполнение таска определённому серверу
+- name: ping test
+  ping:
+  delegate_to: Linux1
