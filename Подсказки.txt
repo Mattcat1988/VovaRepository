@@ -207,4 +207,23 @@ poll: 0 проверить команду
    timeout: 40 максимум жадть 40 секунд
    delegate_to: 127.0.0.1
 run_once: true запустить один раз
-
+ignore_errors: yes игнорировать ошибки
+ - name: Task 1
+   apt: name=treee state=latest
+   ignore_errors: yes пример игнорирования ошибки task
+failed_when: выдать ошибку если
+ tasks:
+  - name: task num2
+    shell: echo Hello World
+    register: results
+    failed_when: "'World' in results.stdout"
+  - debug:
+      var: results
+rc return code: 0 выполнено
+failed_when: results.rc == 0 запустить ошибку если код 0
+any_errors_fatal : true любая ошибка прекращает выполнение playbook
+---
+- name: errors
+  hosts: all
+  any_errors_fatal : true
+  become: yes
