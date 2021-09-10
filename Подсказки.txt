@@ -196,3 +196,15 @@ delegate_to: передать выполнение таска определён
 - name: ping test
   ping:
   delegate_to: Linux1
+shell: sleep 3 && reboot now перезагрузка с задержкой в 3 секунды
+async: 1 максимальный тайм аут
+poll: 0 проверить команду
+ - name: Wait host online
+   wait_for:
+   host: "{{ inventory_hostname }}" ansible var
+   state: started нужное состояние
+   delay: 5  начинать ждать через 5 секунд
+   timeout: 40 максимум жадть 40 секунд
+   delegate_to: 127.0.0.1
+run_once: true запустить один раз
+
