@@ -1,0 +1,12 @@
+---
+- name: Setup apt net-tools
+  hosts: "{{ myhosts }}"
+  become: yes
+
+  tasks:
+  - name: Setup net-tools
+    apt: name=net-tools state=latest
+    register: results
+
+  - debug:
+      var: results

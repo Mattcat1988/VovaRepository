@@ -238,3 +238,4 @@ ansible-playbook playbook1.yml --ask-vault-pass
 --vault-password-file <имя файла> использовать файл с содержимым паролем
 ansible-vault encrypt_string зашифровать строчку. После шифрования пароля, запускать с дешифровкой
 echo -n "secret" | ansible-vault encrypt_string так же зашифровать слово
+==============docker==============
