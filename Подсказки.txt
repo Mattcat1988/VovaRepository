@@ -239,3 +239,15 @@ ansible-playbook playbook1.yml --ask-vault-pass
 ansible-vault encrypt_string зашифровать строчку. После шифрования пароля, запускать с дешифровкой
 echo -n "secret" | ansible-vault encrypt_string так же зашифровать слово
 ==============docker==============
+sudo apt install apt-transport-https
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt install docker-ce
+sudo systemctl status docker проверить статус службы
+sudo usermod -aG docker $USER добавить пользователя в группу докера
+docker run hello-world проверить что всё норм
+docker -v проверить версию докера
+docker images какие есть докер образы
+
+
+
