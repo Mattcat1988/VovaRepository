@@ -256,21 +256,27 @@ docker run -d -p 1234:80 hello-world запустить background
 docker search найти образ
 docker rmi стереть образ
 docker rm стереть контейнер
-
+docker cp host_source_path container:destination_path скопировать файл в докер контейнер
 
 #--------mydocker file test
-
-FROM ubuntu:latest название образа который используется
-
-RUN apt-get -y update запуск команд
-RUN apt-get -y install apache2
-COPY
-RUN echo 'Hello World' > /var/www/html/index.nginx-debian.html
-
-CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"] запуск сервера apache на background
-EXPOSE 80 использовать 80 порт
-COPY копировать
+RUN apt-get -y install
+FROM задаёт базовый образ
+ENV устанавливает постоянные переменные среды
+RUN  выполняет команду и создаёт слой образа. Используется для установки в контейнер пакетов
+COPY копирует в контейнер файлы и папки
+ADD копирует файлы и папки в контейнер. Моежт распаковывать локальные .tar файлы
+CMD описывает команду с аргументами, которую нужно будет выполнить когда контейнер будет запущен
+WORKDIR задаёт рабочую директорию для следующей инструкции
+ARG задаёт переменные для передачи Docker во время сборки образа
+ENTRYPOINT предоставляет команду с аргументами для вызова во время выполнения контейнера
+EXPOSE указывает необходимость открыть порт
+VOLUME создаёт точку монтирования для работы с постоянным хранилищем
+==============================
 docker build -t <название> . собрать docker image
+docker tag vovka:v1 vova:copy создать копию image с новым tag
+docker exec -it <номер контейнера> /bin/bash запустить терминал внутри контейнера
+docker commit <container ID> vova:v2 пример создания новой версии image на основе существующего
+
 
 
 
