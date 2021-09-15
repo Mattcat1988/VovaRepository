@@ -248,6 +248,32 @@ sudo usermod -aG docker $USER добавить пользователя в гр�
 docker run hello-world проверить что всё норм
 docker -v проверить версию докера
 docker images какие есть докер образы
+docker pull скачать образ
+docker ps показать бегущие контейнеры
+docker ps -a все контейнеры которые бежали
+docker run(запустить) -it(интерактивно) -p(перенаправить порты) 1234:8080 tomcat(назвае образа)
+docker run -d -p 1234:80 hello-world запустить background
+docker search найти образ
+docker rmi стереть образ
+docker rm стереть контейнер
+
+
+#--------mydocker file test
+
+FROM ubuntu:latest название образа который используется
+
+RUN apt-get -y update запуск команд
+RUN apt-get -y install apache2
+COPY
+RUN echo 'Hello World' > /var/www/html/index.nginx-debian.html
+
+CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"] запуск сервера apache на background
+EXPOSE 80 использовать 80 порт
+COPY копировать
+docker build -t <название> . собрать docker image
+
+
+
 
 
 
