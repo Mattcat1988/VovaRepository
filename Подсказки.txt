@@ -276,8 +276,10 @@ docker build -t <название> . собрать docker image
 docker tag vovka:v1 vova:copy создать копию image с новым tag
 docker exec -it <номер контейнера> /bin/bash запустить терминал внутри контейнера
 docker commit <container ID> vova:v2 пример создания новой версии image на основе существующего
-
-
+docker login зайти на докер
+docker push <repository name>/<image name> запушить на docker hub
+docker commit 1a130ee353a9 mattcat1988/apachetest:6 переименовать образ не в локальный и запушить
+Обязательно переименовать образ
 
 
 
