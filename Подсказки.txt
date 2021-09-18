@@ -281,6 +281,8 @@ docker commit <container ID> vova:v2 пример создания новой в
 docker login зайти на докер
 docker push <repository name>/<image name> запушить на docker hub
 docker commit 1a130ee353a9 mattcat1988/apachetest:6 переименовать образ не в локальный и запушить
+docker start запустить контейнер
+docker stop  остановить контейнер
 Обязательно переименовать образ
 
 
