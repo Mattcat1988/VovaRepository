@@ -58,7 +58,8 @@ access_log /var/log/nginx/access.log; доспум к логам
 error_log /var/log/nginx/error.log; доступ к логам
 include mime.types; подтянуть поддержку html txt png и прочее говно.
 return 200 'this is call of duty'; вернуть с кодом 200
-
+=======nginx====
+nginx -t проверить конфигурацию
 ========= Команды Гита ========
 система контроля версий
 git init . локальный гит
