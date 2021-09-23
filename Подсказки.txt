@@ -2,8 +2,8 @@
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ssh-keygen создать ключ ssh
-sudo apt install openssh-server
-sudo systemctl enable sshd
+sudo apt install openssh-server установка
+sudo systemctl enable sshd чтобы стартовал при запуске пк
 копировать на удалённую машину id_rsa.pub
 копировать ssh key user в authorized_keys  пользователя root
 
