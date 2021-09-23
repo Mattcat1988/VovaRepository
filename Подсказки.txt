@@ -2,6 +2,7 @@
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ssh-keygen создать ключ ssh
+sudo apt install openssh-server
 копировать на удалённую машину id_rsa.pub
 копировать ssh key user в authorized_keys  пользователя root
 
