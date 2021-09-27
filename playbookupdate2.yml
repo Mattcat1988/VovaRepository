@@ -1,0 +1,30 @@
+---
+- name: update system Debian
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: checking operate system
+    debug: var=ansible_os_family
+
+
+  - block: # =======Block for RedHat=======
+      - name: update cache
+        yum: update_cache=yes
+        register: output_2
+      - debug:
+          var: output_2
+
+    when: ansible_os_family == "RedHat"
+
+
+
+  - block:  #===block for ubuntu====
+      - name: update cache
+        apt: update_cache=yes force_apt_get=yes
+        register: output
+      - debug:
+          var: output
+
+    when: ansible_os_family == "Debian"
+
