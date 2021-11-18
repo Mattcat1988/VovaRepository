@@ -345,6 +345,23 @@ jobs:
 CREATE DATABASE <name database> создать базу данных
 DROP DATABASE <name database> удалить базцу данных
 INT для числовых значений
-VARCHAR неюольшие символьные значение
+VARCHAR небольшие символьные значение
 TEXT Большие текстовые значения
 DATA формат для работы с датами
+CREATE TABLE users (id INT) создать таблицу users
+DROP TABLE удалить таблицу
+NOT NULL не оставлять пустым
+AUTO_INCREMENT каждый раз увеличивать поле на одну еденицу
+PRIMARY KEY(name) уникальное значение
+Пример:
+CREATE TABLE people(
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(30),
+  email VARCHAR(40),
+  bio TEXT,
+  birth DATE,
+  PRIMARY KEY(id)
+);
+ALTER TABLE <имя таблицы> ADD <имя столбика> VARCHAR(32) добавить новое поле в таблицу
+ALTER TABLE <имя таблицы> DROP COLUNM <имя столбика>
+
