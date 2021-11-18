@@ -364,4 +364,21 @@ CREATE TABLE people(
 );
 ALTER TABLE <имя таблицы> ADD <имя столбика> VARCHAR(32) добавить новое поле в таблицу
 ALTER TABLE <имя таблицы> DROP COLUNM <имя столбика>
+INSERT INTO  <имя таблицы>(столбики)
+VALUES (' ') значение
+Пример:
+INSERT INTO people (name, bio, birth, email) VALUES ('Vova', 'prog', '1988-02-07', 'vova@mail.ru') добавить запись
+ALTER TABLE <name table> CHANGE <name table> <name table> DATE NOT NULL; значение дата не может быть пустым
+UPDATE оператор для обновления записи
+SET установить(в каком столбике)
+WHERE указать id
+Пример:
+UPDATE `people` SET `name` = 'Maxim' WHERE id = 5 пример обновления информации в таблице
+UPDATE `people` SET `name` = 'Vovka' `email` = 'pepe@mail.ru' WHERE id >4
+
+
+
+
+
+
 
