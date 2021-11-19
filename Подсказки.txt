@@ -381,6 +381,35 @@ FROM откуда
 DELETE FROM `test`; удаление всех записей в таблице test
 DELETE FROM `test` WHERE id = 2; удаление записи у которой id = 2
 TRUNCATE очистить полностью таблицу
+SELECT оператор выбора * выбрать всё
+FROM от куда
+Пример:
+SELECT * FROM `people`; выбрать всё
+SELECT `name', `bio` FROM `people`; выбрать частично
+SELECT `id`, `name` FROM `people`WHERE id >= 2 AND id < 4; выборка с дополнительными условиями
+IS(IS NOT) проверить значение
+Пример:
+SELECT * FROM `people` WHERE `email` IS NULL;
+OR позвоялет применить какое либо из условий
+Пример:
+SELECT * FROM `people` WHERE `name` = 'Pavel' OR id = 4;
+DISTINCT выбрать уникальные объекты
+SELECT DISTINCT `name` FROM `people`;
+LIMIT лимитировать выборку данных, всегда пишется в самом конце
+Пример:
+SELECT * FROM `people` LIMIT 2; показать только два значения
+SELECT * FROM `people` LIMIT 2, 3; сколько пропустить, сколько всего показать
+ORDER BY оператор сортировки всегда пишется перед LIMIT, WHERE пишется до ORDER
+Правильная последовательность операторов
+SELECT * FROM `people` WHERE name = 'Vova' ORDER BY id LIMIT 2, 3;
+выборка, условие, сортировка, лимит.
+DESC сортировка по убыванию
+Пример:
+SELECT * FROM `people` ORDER BY `id` DESC LIMIT 2, 3;
+
+
+
+
 
 
 
