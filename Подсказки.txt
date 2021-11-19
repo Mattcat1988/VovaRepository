@@ -406,9 +406,12 @@ SELECT * FROM `people` WHERE name = 'Vova' ORDER BY id LIMIT 2, 3;
 DESC сортировка по убыванию
 Пример:
 SELECT * FROM `people` ORDER BY `id` DESC LIMIT 2, 3;
-
-
-
+BETWEEN оператор диапазона AND используется как оператор для диапазон
+SELECT * FROM `people` WHERE `id` BETWEEN 2 AND 3 AND id <> 4 ORDER BY `id` DESC LIMIT 10;
+IN() оператор диапазона
+SELECT * FROM `people` WHERE `id` IN (1,4,5) ORDER BY `id` DESC LIMIT 10;
+LIKE оператор выборки
+SELECT * FROM `people` WHERE `name` LIKE 'V%'; выбрать все записи где имя начинается на V
 
 
 
