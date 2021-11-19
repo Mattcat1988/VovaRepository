@@ -371,13 +371,16 @@ INSERT INTO people (name, bio, birth, email) VALUES ('Vova', 'prog', '1988-02-07
 ALTER TABLE <name table> CHANGE <name table> <name table> DATE NOT NULL; значение дата не может быть пустым
 UPDATE оператор для обновления записи
 SET установить(в каком столбике)
-WHERE указать id
+WHERE условие
 AND дополнительное условие
 Пример:
 UPDATE `people` SET `name` = 'Maxim' WHERE id = 5 пример обновления информации в таблице
 UPDATE `people` SET `name` = 'Vovka' `email` = 'pepe@mail.ru' WHERE id > 4
-
-
+DELETE  оператор удаления
+FROM откуда
+DELETE FROM `test`; удаление всех записей в таблице test
+DELETE FROM `test` WHERE id = 2; удаление записи у которой id = 2
+TRUNCATE очистить полностью таблицу
 
 
 
