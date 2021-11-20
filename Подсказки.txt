@@ -431,6 +431,29 @@ CREATE TABLE orders(
      FOREIGN KEY(personID) REFERENCES people(id)
 
 ); Пример где personID создан как ссылка на id из таблички people
+Пример построения связей на примере магазина
+INSERT INTO `orders`(`orderNumber`, `shopID`, `personID`)
+       VALUES
+       (0001, 2, 4),
+       (0002, 4, 1),
+       (0003, 2, 3),
+       (0004, 4, 4),
+       (0005, 3, 1),
+       (0006, 3, 2);
+INNER JOIN для того, чтобы объеденить таблицы
+SELECT orders.orderNumber, people.name, people.email FROM people
+INNER JOIN orders ON people.id = orders.personID
+ORDER BY orders.orderNumber DESC;
+Пример проверки объеденения записей и дальнейшая сортировка по убыыванию
+SELECT shop.title, people.name, people.email FROM people
+INNER JOIN orders ON people.id = orders.personID
+INNER JOIN shop ON shop.id = orders.shopID
+ORDER BY orders.orderNumber DESC; пример объеденения нескольких таблиц
+Пример объеденения таблиц при помощи LEFT JOIN RIGHT JOIN
+SELECT people.name, orders.orderNumber FROM people
+LEFT JOIN orders ON people.id = orders.personID
+ORDER BY people.name DESC;
+Проверить слияние таблиц SQL JOIN
 
 
 
