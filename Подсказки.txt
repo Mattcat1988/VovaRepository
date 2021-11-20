@@ -413,6 +413,24 @@ SELECT * FROM `people` WHERE `id` IN (1,4,5) ORDER BY `id` DESC LIMIT 10;
 LIKE оператор выборки
 SELECT * FROM `people` WHERE `name` LIKE 'V%'; выбрать все записи где имя начинается на V
 SELECT * FROM `people` WHERE `email` LIKE '%mail%'; показать записи, где есть mail в любом месте
+INDEX для ускорения поиска информации
+Пример создания индекса для колонки name:
+CREATE INDEX NIndex ON `people`(name);
+DROP INDEX NIndex ON `people`; удаление индекса
+DEFAULT CURRENT_TIMESTAMP указывать текущую дату при добавлении эелемента
+FOREIGN KEY и REFERENCES для создания ссылок
+Пример:
+CREATE TABLE orders(
+     id INT NOT NULL AUTO_INCREMENT,
+     orderNumber INT,
+     shopID INT,
+     personID INT,
+     date_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY(id),
+     FOREIGN KEY(shopID) REFERENCES shop(id),
+     FOREIGN KEY(personID) REFERENCES people(id)
+
+); Пример где personID создан как ссылка на id из таблички people
 
 
 
