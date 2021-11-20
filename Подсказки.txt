@@ -412,7 +412,7 @@ IN() оператор диапазона
 SELECT * FROM `people` WHERE `id` IN (1,4,5) ORDER BY `id` DESC LIMIT 10;
 LIKE оператор выборки
 SELECT * FROM `people` WHERE `name` LIKE 'V%'; выбрать все записи где имя начинается на V
-
+SELECT * FROM `people` WHERE `email` LIKE '%mail%'; показать записи, где есть mail в любом месте
 
 
 
