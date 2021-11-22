@@ -460,8 +460,28 @@ SELECT people.name, orders.orderNumber FROM people
 LEFT JOIN orders ON people.id = orders.personID
 ORDER BY people.name DESC;
 Проверить слияние таблиц SQL JOIN
-
-
-
-
-
+использование RIGHT JOIN сравнения
+SELECT orders.date_time, people.name FROM `orders`
+RIGHT JOIN `people` ON orders.personID = people.id;
+AS назначить псевдоним
+Пример:
+SELECT `name` AS 'Имя', `birth` AS 'День рождения' FROM `people`;
+CONCAT объеденение полей
+Пример:
+SELECT CONCAT('Имя: ', name, '. День Рождения: ', birth) AS 'Информация' FROM `people`;
+выборка из двух таблиц
+SELECT p.id, p.name, s.title, s.price FROM `people` AS p, `shop` AS s;
+COUNT функция подсчёта
+Пример:
+SELECT COUNT(id) FROM `shop`;
+MIN and MAX выбрать минимальное или максимальное значение
+SELECT MIN(price) FROM shop; выбрано минимальное значеие по цене из таблицы SHOP
+AVG найти среднее арифметическое значение
+SUM сумма
+UCASE перевести всё в верхний регистр
+LCASE перевести в нижний регистр
+GROUP BY группировать
+Пример
+SELECT `price`, COUNT(price) FROM `shop` GROUP BY price; Групировка по цене
+SELECT `price` AS 'Цена', COUNT(price) AS 'Количество' FROM `shop`
+GROUP BY price HAVING COUNT(price) > 1; Показать результаты где количество больше чем 1
