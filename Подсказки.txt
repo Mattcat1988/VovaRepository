@@ -445,7 +445,8 @@ SELECT orders.orderNumber, people.name, people.email FROM people
 INNER JOIN orders ON people.id = orders.personID
 ORDER BY orders.orderNumber DESC;
 Пример проверки объеденения записей и дальнейшая сортировка по убыыванию
-SELECT shop.title, people.name, people.email FROM people
+SELECT shop.title
+people.name, people.email FROM people
 INNER JOIN orders ON people.id = orders.personID
 INNER JOIN shop ON shop.id = orders.shopID
 ORDER BY orders.orderNumber DESC; пример объеденения нескольких таблиц
