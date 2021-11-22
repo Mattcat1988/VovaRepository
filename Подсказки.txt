@@ -20,7 +20,8 @@ chmod a+x сделать исполняемым для всех
 shutdown -h +1 выключить пк через 1 минуту
 dpkg –i                - установить программу из файла .deb
 dpkg –r                - удалить программу
-
+du - посмотреть сколько места занимают файлы и каталоги du -ha показать размер файлов и папок du -hac --exclude="*.log"
+df проверка пространства на диске
 
 ======== Работа с текстом ======
 ctrl+w найти
@@ -268,6 +269,10 @@ docker search найти образ
 docker rmi стереть образ
 docker rm стереть контейнер
 docker cp host_source_path container:destination_path скопировать файл в докер контейнер
+docker inspect просмотр полной информации о запущенном докере
+docker logs логи докера
+docker exec исполнить команду в запущенном контейнере
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 
 #--------mydocker file test
 RUN apt-get -y install
