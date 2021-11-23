@@ -390,6 +390,7 @@ AND дополнительное условие
 Пример:
 UPDATE `people` SET `name` = 'Maxim' WHERE id = 5 пример обновления информации в таблице
 UPDATE `people` SET `name` = 'Vovka' `email` = 'pepe@mail.ru' WHERE id > 4
+UPDATE `clothes` SET `bio` = 'green' WHERE `clothes`.`id` = 2;
 DELETE  оператор удаления
 FROM откуда
 DELETE FROM `test`; удаление всех записей в таблице test
