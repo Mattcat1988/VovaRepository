@@ -349,6 +349,12 @@ jobs:
 
 
 ======================SQL==================
+3306 порт для mysql
+mysql -h 127.0.0.1 -u root -p подключение к локальной базе
+show databases; показать все базы
+show tables; посмотреть все таблицы
+use выбрать базу данных
+
 CREATE DATABASE <name database> создать базу данных
 DROP DATABASE <name database> удалить базцу данных
 INT для числовых значений
