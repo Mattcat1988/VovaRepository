@@ -524,3 +524,24 @@ number(точностьб масштаб) числовое значение
 date Используется для хранения даты и времени
 =====JSON====
 формат хранения данных
+============================
+jq для фильтрации запроса
+-c               compact instead of pretty-printed output;
+  -n               use `null` as the single input value;
+  -e               set the exit status code based on the output;
+  -s               read (slurp) all inputs into an array; apply filter to it;
+  -r               output raw strings, not JSON texts;
+  -R               read raw strings, not JSON texts;
+  -C               colorize JSON;
+  -M               monochrome (don't colorize JSON);
+  -S               sort keys of objects on output;
+  --tab            use tabs for indentation;
+  --arg a v        set variable $a to value <v>;
+  --argjson a v    set variable $a to JSON value <v>;
+  --slurpfile a f  set variable $a to an array of JSON texts read from <f>;
+  --rawfile a f    set variable $a to a string consisting of the contents of <f>;
+  --args           remaining arguments are string arguments, not files;
+  --jsonargs       remaining arguments are JSON arguments, not files;
+  --               terminates argument processing;
+curl http://api.icndb.com/jokes/random | jq "." > my_sample.json запарсить в файл формата json
+cat my_sample.json | jq ".type" пример вывода содержимого type
