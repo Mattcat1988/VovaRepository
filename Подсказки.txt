@@ -357,14 +357,17 @@ show tables; посмотреть все таблицы
 SHOW COLUMNS FROM `people`; показать структуру таблички people
 use выбрать базу данных
 ALTER TABLE table_name RENAME TO new_table_name переименовать таблицу
-
+DESC имя таблички, отобразить структуру таблицы
 CREATE DATABASE <name database> создать базу данных
 DROP DATABASE <name database> удалить базцу данных
 INT для числовых значений integer в postgeSQL
 ENUM совсем короткий формат текстовых данных
 Пример
 ENUM ('value-1', 'value-2', 'value-3')
+SET тоже для хранения текста
 VARCHAR небольшие символьные значение character varying postgesql
+FLOAT вечественный тип данных
+DECIMAL для хранения чисел с указанием сколько знаков после десятичного разделителя будет зайдействовано
 TEXT Большие текстовые значения text postgresql
 DATA формат для работы с датами
 CREATE TABLE users (id INT) создать таблицу users
@@ -519,3 +522,5 @@ char(n) символьный формат максимальный размер 
 varchar2(n) символьный формат максимальный размер 4000 байт
 number(точностьб масштаб) числовое значение
 date Используется для хранения даты и времени
+=====JSON====
+формат хранения данных
