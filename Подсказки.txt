@@ -353,6 +353,7 @@ jobs:
 mysql -h 127.0.0.1 -u root -p подключение к локальной базе
 show databases; показать все базы
 show tables; посмотреть все таблицы
+SHOW COLUMNS FROM `people`; показать структуру таблички people
 use выбрать базу данных
 ALTER TABLE table_name RENAME TO new_table_name переименовать таблицу
 
@@ -396,6 +397,7 @@ FROM откуда
 DELETE FROM `test`; удаление всех записей в таблице test
 DELETE FROM `test` WHERE id = 2; удаление записи у которой id = 2
 TRUNCATE очистить полностью таблицу
+TRUNCATE `test`;
 SELECT оператор выбора * выбрать всё
 FROM от куда
 Пример:
@@ -409,6 +411,7 @@ OR позвоялет применить какое либо из условий
 Пример:
 SELECT * FROM `people` WHERE `name` = 'Pavel' OR id = 4;
 DISTINCT выбрать уникальные объекты
+
 SELECT DISTINCT `name` FROM `people`;
 LIMIT лимитировать выборку данных, всегда пишется в самом конце
 Пример:
@@ -460,11 +463,11 @@ SELECT orders.orderNumber, people.name, people.email FROM people
 INNER JOIN orders ON people.id = orders.personID
 ORDER BY orders.orderNumber DESC;
 Пример проверки объеденения записей и дальнейшая сортировка по убыыванию
-SELECT shop.title
-people.name, people.email FROM people
-INNER JOIN orders ON people.id = orders.personID
+SELECT shop.title, people.name, people.email FROM people
+INNER JOIN orders ON people.id = orders.personId
 INNER JOIN shop ON shop.id = orders.shopID
-ORDER BY orders.orderNumber DESC; пример объеденения нескольких таблиц
+ORDER BY orders.orderNumber DESC;
+ пример объеденения нескольких таблиц
 Пример объеденения таблиц при помощи LEFT JOIN RIGHT JOIN
 SELECT people.name, orders.orderNumber FROM people
 LEFT JOIN orders ON people.id = orders.personID
@@ -495,3 +498,5 @@ GROUP BY группировать
 SELECT `price`, COUNT(price) FROM `shop` GROUP BY price; Групировка по цене
 SELECT `price` AS 'Цена', COUNT(price) AS 'Количество' FROM `shop`
 GROUP BY price HAVING COUNT(price) > 1; Показать результаты где количество больше чем 1
+SELECT price AS 'Цена', COUNT(price) AS 'Количество' FROM shop s GROUP BY price HAVING
+COUNT(price) < 2;
