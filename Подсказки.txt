@@ -506,6 +506,8 @@ SELECT `price`, COUNT(price) FROM `shop` GROUP BY price; Групировка п
 SELECT `price` AS 'Цена', COUNT(price) AS 'Количество' FROM `shop`
 GROUP BY price HAVING COUNT(price) > 1; Показать результаты где количество больше чем 1
 SELECT price AS 'Цена', COUNT(price) AS 'Количество' FROM shop s GROUP BY price HAVING
+HAVING применяется не для всего набора столбцов таблицы, а для набора,
+созданного оператором SQL GROUP BY и применяется всегда строго после него.
 COUNT(price) < 2;
 =====postgreSQL=====
 Типы данных
@@ -545,3 +547,41 @@ jq для фильтрации запроса
   --               terminates argument processing;
 curl http://api.icndb.com/jokes/random | jq "." > my_sample.json запарсить в файл формата json
 cat my_sample.json | jq ".type" пример вывода содержимого type
+cat my_sample.json | jq ".value.joke" вывести содержимое value и joke
+========Kafka==========
+Kafka Broker, kafka Server, Kafka Node:
+функции брокера, приём сообщений, хранение и выдача.
+Kafka кластер. Масштабирование и репликая данных
+Zookeeper состояние кластера, Конфигурация, адресная книга(data)
+kafka controller обеспечивает согласованность данных
+Kafka Message
+Key ключ для распределения сообщений по класетеру
+Value содержимое
+Timestamp ну тут понятно
+Headers Набор key-value пар
+Kafka Topic-stream of data хранилище сообщений и событий, там же выставляется очередь
+Partitions для парарелизации обработки данных
+Данные топика хранятся в Log файлах
+.log самое сообщение, index позиция в топике, timeindex
+новый активный segment создается когда log файлы переполнены
+Data removing from Kafka Topic поддерживается автоматическое удаление TTL
+удаляются сегменты партиций segment timestamp expired - to delete
+Data Replication(Set replication-factor(>1)) для отказоустойчивости
+Master-Slave- Гарантия согласованнсти данных
+На каждый Broker по одной Lead реплики
+Kafka Controller назначает Leader-реплики
+ISR  min.insync.replicas = 3 синхронизация лидеров с фоловерами
+Kafka Producer отправитель сообщений
+acks = 0 producer не ждет подтверждение отправки сообщений
+acks = 1 producer ждет подтверждения отправки ссобщений только от Leader-реплики
+acks = -1(all) все сообщения
+Kafka Consumer получатель сообщений
+<<group.id>> consumer для одновременной обработки данных consumer = particia
+Kafka Consumer Offset Last consumed message by Group
+<<group.id: X>> __consumer_offset информация о прочитанных сообщениях
+Kafka Consumer Offset commit
+Auto commit - at most once
+Manual commit -at least once
+Custom offset managment - exactly once(not missed. no duplicates)
+used: auto.offset.reset
+earliest or latest
