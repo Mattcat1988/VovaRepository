@@ -17,7 +17,9 @@ usermod -aG sudo sammy добавить пользователя в группу
 chmod a+x сделать исполняемым для всех
 #1/bin/bash для скриптов bash
 ps aux расширенный список запущенных процессов
-
+sudo apt-get clean очистить кэш архива apt
+sudo apt-get autoclean
+apt-get autoremove
 shutdown -h +1 выключить пк через 1 минуту
 dpkg –i                - установить программу из файла .deb
 dpkg –r                - удалить программу
@@ -585,3 +587,20 @@ Manual commit -at least once
 Custom offset managment - exactly once(not missed. no duplicates)
 used: auto.offset.reset
 earliest or latest
+=======CURL======
+https://mcs.mail.ru/blog/10-komand-curl-kotorye-vam-sleduet-znat
+curl инструмент для передачи данных с сервера на сервер
+curl -X GET для запроса API -i получить заголовки
+curl -XPOST отправить пост запрос -d передать тело запроса
+curl -XPOST http://api.icndb.com/jokes/random -d 'Hello'
+curl -XPOST http://api.icndb.com/jokes/random -d '{"name": "alex"}'
+curl -i информация о заголовках
+curl --head запрос головы
+curl -o test.txt загрузить данные запроса в документ
+curl -O скачать
+curl --data "title=hello&body=Hello World" запрос в виде списка=значение для тестирования api
+curl --data "param1=test1&param2=test2" http://test.com
+curl --data '{"param1":"test1","param2":"test2"}' \http://www.test.com  запрос в виде JSON
+curl -X DELETE удалить, что-то
+curl -k игнорирование ошибки неправильных сертификатов
+curl -u <user:password> https://my-test-api.com/endpoint1 использование авторизации
