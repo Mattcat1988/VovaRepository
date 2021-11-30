@@ -25,6 +25,8 @@ dpkg –i                - установить программу из файл
 dpkg –r                - удалить программу
 du - посмотреть сколько места занимают файлы и каталоги du -ha показать размер файлов и папок du -hac --exclude="*.log"
 df проверка пространства на диске
+fdisk программа для управления разделами диска
+fdisk -l просмотреть разделы
 
 ======== Работа с текстом ======
 ctrl+w найти
@@ -520,6 +522,8 @@ Character(N), Char(N), TEXT; Символьные
 Timestamp, date, time, interval; Временные
 Bit(n), BIT VARYING(n) битовые
 Money Монетарный
+serial значит уникальный
+id serial primary key
 =====ORACLE SQL=====
 типы данных
 char(n) символьный формат максимальный размер 2000 байт
@@ -529,7 +533,7 @@ date Используется для хранения даты и времени
 =====JSON====
 формат хранения данных
 ============================
-jq для фильтрации запроса
+jq для фильтрации JSON  запросов
 -c               compact instead of pretty-printed output;
   -n               use `null` as the single input value;
   -e               set the exit status code based on the output;
