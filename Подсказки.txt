@@ -8,6 +8,18 @@ sudo systemctl enable sshd чтобы стартовал при запуске �
 копировать ssh key user в authorized_keys  пользователя root
 ssh-copy-id root@192.168.20.116 копировать ssh ключ на сервер
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@server2
+====== Архиваторы
+tar cf  mytar.tar  Folder1   - заархивировать Folder1
+tar xf mytar.tar  - разархивировать архив
+gzip     / bzip2     / xz      – скомпрессировать файл
+gunzip /  bunzip2 / unxz  – раскомпресировать файл
+
+tar cvzf myBZIP2.bz2  Folder1    – сжать Folder1
+tar xvf  myBZIP2.bz2                  - распаковать архив
+tar tf myBZIP2.bz2    - посмотреть что внутри архива
+
+zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
+unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
 pbcopy копировать в буфер обмена
@@ -46,7 +58,7 @@ nc -zv 192.168.0.1 20-25 сканировать диапазон портов
 nmap для сканирования портов и сети
 nmap [-options] [HostName or IP] [-p] [PortNumber]
 nmap -A -T4 для сканирования портов
-
+sudo chmod ugo+rwx дать все права
 ======== Работа с текстом ======
 ctrl+w найти
 ctrl+o сохранить
@@ -324,6 +336,11 @@ docker commit 1a130ee353a9 mattcat1988/apachetest:6 переименовать �
 docker start запустить контейнер
 docker stop  остановить контейнер
 Обязательно переименовать образ
+==============docker-compose======
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
 =======gitactions====
 - uses: actions/checkout@v2 скачать репу
 runs-on: [self-hosted] запустить на ранере
