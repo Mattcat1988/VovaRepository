@@ -6,6 +6,8 @@ sudo apt install openssh-server установка
 sudo systemctl enable sshd чтобы стартовал при запуске пк
 копировать на удалённую машину id_rsa.pub
 копировать ssh key user в authorized_keys  пользователя root
+ssh-copy-id root@192.168.20.116 копировать ssh ключ на сервер
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@server2
 
 ========== Разное ==========
 pbcopy копировать в буфер обмена
