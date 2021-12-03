@@ -58,6 +58,7 @@ nc -zv 192.168.0.1 20-25 сканировать диапазон портов
 nmap для сканирования портов и сети
 nmap [-options] [HostName or IP] [-p] [PortNumber]
 nmap -A -T4 для сканирования портов
+sudo netstat -tulpn посмотреть порты тоже
 sudo chmod ugo+rwx дать все права
 ======== Работа с текстом ======
 ctrl+w найти
@@ -310,6 +311,7 @@ docker logs логи докера
 docker exec исполнить команду в запущенном контейнере
 docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 docker ps -q | xargs  docker stats --no-stream посмотреть сколько ресурсов потребляет контейнер
+docker-compose -f docker-compose.yml up -d запуск файла docker compose
 
 
 #--------mydocker file test
@@ -650,3 +652,6 @@ curl --data '{"param1":"test1","param2":"test2"}' \http://www.test.com  запр
 curl -X DELETE удалить, что-то
 curl -k игнорирование ошибки неправильных сертификатов
 curl -u <user:password> https://my-test-api.com/endpoint1 использование авторизации
+=======Zabbix=====
+apt-get install zabbix-agent для установки zabbix agent
+service zabbix-agent start для запуска zabbix-agent
