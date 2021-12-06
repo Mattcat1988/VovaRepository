@@ -60,6 +60,9 @@ nmap [-options] [HostName or IP] [-p] [PortNumber]
 nmap -A -T4 для сканирования портов
 sudo netstat -tulpn посмотреть порты тоже
 sudo chmod ugo+rwx дать все права
+snmpwalk -v2c -c public 192.168.12.220 проверить доступность snmp
+sudo iptables -L -t nat -v правила iptables
+
 ======== Работа с текстом ======
 ctrl+w найти
 ctrl+o сохранить
@@ -314,6 +317,13 @@ docker ps -q | xargs  docker stats --no-stream посмотреть скольк
 docker-compose -f docker-compose.yml up -d запуск файла docker compose
 docker stop $(docker ps -a -q) остановить все контейнеры
 docker rm $(docker ps -a -q)  удалить все контейнеры
+docker stack deploy	Deploy a new stack or update an existing stack
+docker stack ls	List stacks
+docker stack ps	List the tasks in the stack
+docker stack rm	Remove one or more stacks
+docker stack services	List the services in the stack
+docker run -d --name=nginx nginx:latest  запустить конктейнер со своим именем
+docker rm --force nginx принудительная остановка и удаление контейнера
 
 
 #--------mydocker file test
@@ -657,3 +667,5 @@ curl -u <user:password> https://my-test-api.com/endpoint1 использован
 =======Zabbix=====
 apt-get install zabbix-agent для установки zabbix agent
 service zabbix-agent start для запуска zabbix-agent
+=====prometheus=====
+https://github.com/Einsteinish/Docker-Compose-Prometheus-and-Grafana ссылка
