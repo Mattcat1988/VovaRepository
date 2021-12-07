@@ -62,6 +62,17 @@ sudo netstat -tulpn посмотреть порты тоже
 sudo chmod ugo+rwx дать все права
 snmpwalk -v2c -c public 192.168.12.220 проверить доступность snmp
 sudo iptables -L -t nat -v правила iptables
+find [папка] [параметры] критерий шаблон [действие]
+find . -name "*.png" |grep 2021
+find . -type f -name "Загрузки" Для поиска только файлов необходимо использовать параметр f
+find . -type d -name "Загрузки" по типа файлов d директория
+find ./test ./test2 -type f -name "*.c" Искать в двух каталогах одновременно:
+find . -maxdepth 1 -type f -name ".*" ПОИСК СКРЫТЫХ ФАЙЛОВ
+find . -type f -perm 0664 Найти файлы с определенной маской прав, например, 0664:
+sudo find /usr -type f -perm /u=s
+find / -mtime 50 ПОИСК ПО ДАТЕ МОДИФИКАЦИИ
+find / -size 50M ПОИСК ФАЙЛОВ ПО РАЗМЕРУ
+
 
 ======== Работа с текстом ======
 ctrl+w найти
@@ -324,6 +335,8 @@ docker stack rm	Remove one or more stacks
 docker stack services	List the services in the stack
 docker run -d --name=nginx nginx:latest  запустить конктейнер со своим именем
 docker rm --force nginx принудительная остановка и удаление контейнера
+docker run -d -p 80:80 -v /root/default.conf:/etc/nginx/conf.d/default.conf nginx свой конфиг
+
 
 
 #--------mydocker file test

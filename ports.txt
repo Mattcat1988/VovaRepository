@@ -1,0 +1,5 @@
+10050 port zabbix
+9100 port zabbix agent
+22 port ssh
+3000 port grafana
+9090 port prometheus
