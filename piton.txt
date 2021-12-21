@@ -1,0 +1,21 @@
+.append('fe') добавить в конец.
+cities.insert(2, 'Feodosia') вставить
+del cities[-1] удалить
+cities.remove("Tula")
+=======str=====
+print(name.title()) всегда с заглавной
+print(name.upper()) всегда большими
+print(name.lower()) всегда строчными
+print(a.rsplit())
+print(a.lstrip())
+print(a.strip())  обрезка текста
+=====massive=====
+cities.sort() сортировка
+.reverse реверс сортировка
+=====massive_loop ===
+for x in  range(1, 6):
+    print(x)
+простой цикл
+print("Max number is: " + str(max(mynumber_list))) #показать максимальный номер в list
+функции в классах нываются метродами
+sudo apt install python3.9-full python3.9-venv установить виртуальное окружение

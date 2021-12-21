@@ -72,7 +72,9 @@ find . -type f -perm 0664 Найти файлы с определенной ма
 sudo find /usr -type f -perm /u=s
 find / -mtime 50 ПОИСК ПО ДАТЕ МОДИФИКАЦИИ
 find / -size 50M ПОИСК ФАЙЛОВ ПО РАЗМЕРУ
-
+apt search python3.9
+sudo apt install python3-distutils
+sudo apt purge <apt> удаление приложения со всеми хвостами
 
 ======== Работа с текстом ======
 ctrl+w найти
