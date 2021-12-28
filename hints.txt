@@ -426,7 +426,7 @@ jobs:
       - name: pwd
         run: pwd
 
-
+run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . m71516@hostru04.fornex.org:/usr/share/nginx/html
 
 
 
