@@ -6,7 +6,53 @@ console это объект
 выражение всегда возвращает значение
 выражение с побочными действиями не только возвращает. но и выполняет другие действия
 ============переменные===========
-имена переменных
+
+Имена переменных
 PascalCase типы и классы
 DB_PASSWORD значения известны до запуска приложения и не меняются
 camelCase Все остальные переменные
+
+Объявление переменных
+let const var
+let a // объявление
+const c = 10 объявление и присваивание
+a = true Присваивание
+let можно переписать
+const присваивается сразу и не меняется
+let myName
+
+// console.log(myName)
+
+myName = 'Vova'
+
+console.log(myName)
+
+console.log(console.log(10))
+
+const myName = 'Vova'
+// myName = ''
+console.log(myName)
+======Тип переменной
+тип переменной определяется типом присвоенного значения
+примитивные типа string(строка) boolean(logic(true false)) number(число) null undefined symbol(символ)
+ссылочный тип object (объект)
+
+const objectA = {
+    a: 10,
+    b: true
+}
+console.table(objectA)
+добавление свойств объекта
+const objectA = {
+    a: 10,
+    b: true
+
+}
+console.table(objectA)
+
+const copyOfA = objectA
+console.table(copyOfA)
+copyOfA.a = 20
+copyOfA.b = false
+copyOfA.c = 'Putin'
+console.table(copyOfA)
