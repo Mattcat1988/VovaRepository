@@ -50,9 +50,30 @@ const objectA = {
 }
 console.table(objectA)
 
-const copyOfA = objectA
+const copyOfA = objectA  // ссылка на объект
 console.table(copyOfA)
 copyOfA.a = 20
 copyOfA.b = false
 copyOfA.c = 'Putin'
 console.table(copyOfA)
+
+========Динамическая типизация
+function a() {
+    console.log('Hello There')
+
+}
+a()
+вызов функции
+const для объявления функции
+const a = () => {
+    console.log('Hello There')
+}
+a()
+a = 10
+a() //error нельзя присвоить новое значение
+Правила работы с переменными
+1. Все переменные объявлять перерд их использованием
+2. Стараться использовать const везде, где это возможно
+=====Объекты======
+Практически все сущности в javascript объекты
+объект- набор свойств имя и значение
