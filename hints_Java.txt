@@ -134,3 +134,30 @@ const userProfile = {
     hasSignedAgreement: false
 }
 console.log(userProfile)
+==============Глобальные объекты
+window веб браузеры
+global Node.js
+globalThis Унифицированный глобальный объект
+window.console.log(10) пример просмотра свойства window объекта
+global.console.log('Hello') Node.js
+==========Методы
+Метод-свойства объекта, значение которого-функция
+
+const myCity = {
+    city: 'Novosibirsk',
+    cityGreeting: function() {
+        console.log('Greetings')
+    }
+}
+myCity.cityGreeting()
+Сокращенный формат запись методов
+const myCity = {
+    city: 'Novosibirsk',
+    cityGreeting() {
+        console.log('Greetings')
+    }
+}
+myCity.cityGreeting()
+myCity.city доступ к значению свойства
+myCity.cityGreeting() вызов метода
+JSON- javascript object notation формавт обмена данными
