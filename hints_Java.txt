@@ -77,3 +77,60 @@ a() //error нельзя присвоить новое значение
 =====Объекты======
 Практически все сущности в javascript объекты
 объект- набор свойств имя и значение
+Изменение значений свойств:
+const myCity = {
+    city: 'New York'
+}
+console.log(myCity)
+myCity.city = 'Las Vegas'
+console.log(myCity)
+Добавление новых свойств
+const myCity = {
+    city: 'New York'
+}
+console.log(myCity)
+myCity.country = 'USA'
+console.log(myCity)
+удаление свойств объекта
+delete оператор
+
+const myCity = {
+    city: 'New York'
+}
+myCity.country = 'USA'
+myCity.popular = true
+console.log(myCity)
+delete myCity.popular
+console.log(myCity)
+Доступ к значению свойства с использованием скобок
+
+const myCity = {
+    city: 'New York'
+}
+myCity['popular'] = true
+console.log(myCity)
+const countryPropertyName = 'country'
+myCity[countryPropertyName] = 'USA'
+console.log(myCity)
+в квадратных скобках можно использовать любое выражение javascript
+вложенные свойства:
+const myCity = {
+    city: 'Novosibirsk',
+    info: {
+        isPopular: true,
+        country: 'Russia'
+    }
+}
+console.log(myCity.info.isPopular)
+delete myCity.info['isPopular']
+console.log(myCity)
+Использвание переменных
+
+const name = 'Vova'
+const postsQty = 23
+const userProfile = {
+    name,
+    postsQty,
+    hasSignedAgreement: false
+}
+console.log(userProfile)
