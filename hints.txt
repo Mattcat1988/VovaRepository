@@ -22,6 +22,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+sudo dpkg -i path to deb file установка из пакета deb
 pbcopy копировать в буфер обмена
 sudo ALL=(ALL:ALL) NOPASSWD:ALL
 sudo -s перейтив root
