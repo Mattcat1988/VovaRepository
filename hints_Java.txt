@@ -160,4 +160,109 @@ const myCity = {
 myCity.cityGreeting()
 myCity.city доступ к значению свойства
 myCity.cityGreeting() вызов метода
-JSON- javascript object notation формавт обмена данными
+JSON- javascript object notation формат обмена данными
+JSON.parse() конвертация JSON в объект
+JSON.stringify() конвертация объекта в JSON
+const post = {
+    title: 'My post',
+    likesQty: 5
+}
+
+JSON.stringify(post)
+конвертация java в JSON
+const post = {
+    title: 'My post',
+    likesQty: 5
+}
+
+JSON.stringify(post)
+const postStringified = JSON.stringify(post)
+JSON.parse(postStringified)
+конвертация JSON в javascript
+===============Мутация в javascript
+значения примитивных типов
+const a = 10
+let b = a   // copy by value
+b = 30
+console.log(b)
+console.log(a)
+===значения ссылочного типа
+const person = {
+    name: 'Vova',
+    age: 21
+}
+person.age = 22
+person.isAdult = true
+console.log(person.age)
+console.log(person.isAdult)
+мутация объекта
+=====мутирование копий===
+const person = {
+    name: 'Vova',
+    age: 21
+}
+ const person2 = person   // copy by reference
+ person2.age = 26
+ person2.isAdult = true
+ console.log(person.age)
+ console.log(person.isAdult)
+как избежать мутации
+Object.assing({}, название переменной) можно создавать новые объекты
+const person = {
+    name: 'Vova',
+    age: 21
+}
+const person2 = Object.assign({}, person)
+person2.age = 26
+console.log(person2.age)
+console.log(person.age)
+если у объекта есть вложенные объекты, то ссылки на них сохраняются
+const person = {
+    name: 'Vova',
+    age: 21
+}
+const person2 = { ...person } // оператор разделения объекта на свойства
+person2.name = 'Alice'
+console.log(person2.name)
+console.log(person.name)
+вариант 3
+const person = {
+    name: 'Vova',
+    age: 21
+}              // конвертация в объект  // конвертация в строку
+const person2 = JSON.parse(JSON.stringify(person))
+person2.name = 'Alice'
+console.log(person2.name)
+console.log(person.name)
+=====ФУНКЦИИ=====
+функция - блок кода, который можно выполнять многократно
+let a = 5
+let b = 3
+function sum(a, b) {
+    const c = a + b
+    console.log(c)
+}
+sum(a,b)
+
+a = 8
+b = 12
+sum(a, b)
+функция может быть:
+именованной, присвоена переменной, анонимной, аргумент при вызове другой функции, значением свойства метода объекта
+function myFn(a, b) {
+    let c
+    a = a + 1
+    c = a + b
+    return c
+}
+функция возвращает undefined если нет инструкции return
+Вызов функции
+             // параметры
+function myFn(a, b) {
+    let c
+    a = a + 1
+    c = a + b
+    return c
+}
+    // аргументы
+myFn(10, 3)
