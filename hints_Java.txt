@@ -297,3 +297,48 @@ function printMyName() {
     console.log('Vova')
 }
 setTimeout(printMyName, 1000)
+Правила работы с функциями
+1. Называть функции исходя из выполняемых задач
+2. Одна функция должна выполнять одну задачу
+3. Не рекомендуеися изменять внешние относительно функции переменные
+======Области видимости
+области видимости определяет границы действия переменной
+let a        // global var
+let b
+
+function myFn() {
+    let b     // local var
+    a = true
+    b = 10
+    console.log(b)
+
+}
+myFn()
+console.log(a)
+console.log(b)
+цепочка областей видимости
+const a = 5
+function myFn() {
+    function innerFn() {
+        console.log(a) // 5
+
+    }
+    innerFn()
+
+}
+myFn()
+Жизненный цикл переменных
+let a
+let b
+
+function Myfn() {
+    let b
+    a = true
+    b = 10
+    console.log(b)
+
+}
+Myfn()
+console.log(a)
+console.log(b)
+Перем
