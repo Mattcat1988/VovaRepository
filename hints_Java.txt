@@ -266,3 +266,34 @@ function myFn(a, b) {
 }
     // аргументы
 myFn(10, 3)
+=====передача значения по ссылке
+const personOne = {
+    name: 'Vova',
+    age: 21
+}
+function increasePersonAge(person) {
+    person.age += 1
+    return person
+}
+increasePersonAge(personOne)
+console.log(personOne.age)
+внутри функции не рекомендуется мутировать внешние объекты
+создание копии объекта
+const personOne = {
+    name: 'Vova',
+    age: 21
+}
+function increasePersonAge(person) {
+    const updatedPerson = Object.assign({}, person)
+    updatedPerson.age += 1
+    return updatedPerson
+}
+const updatedPersonOne = increasePersonAge(personOne)
+console.log(personOne.age)
+console.log(updatedPersonOne.age)
+колбэк функции
+колбэк функция это функция которая вызывается в теле другой функции
+function printMyName() {
+    console.log('Vova')
+}
+setTimeout(printMyName, 1000)
