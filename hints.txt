@@ -22,6 +22,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+arp запросить mac адрес
 openssl passwd шифрование паролей
 scp index.html root@192.168.20.117:/var/www/html/ копировать файл с локальной машины на удалённый сервер
 scp root@123.123.123.123:/home/test.txt /directory  копировать с удалённого сервера на локальную машину
