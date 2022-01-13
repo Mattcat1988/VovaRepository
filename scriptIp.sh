@@ -9,4 +9,5 @@ do
       sleep 0.5
 done
 
+echo "Hello $0"
 
