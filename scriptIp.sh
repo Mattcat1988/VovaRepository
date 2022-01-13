@@ -11,3 +11,5 @@ done
 
 echo "Hello $0"
 
+myhost=`hostname`
+echo "$myhost"
