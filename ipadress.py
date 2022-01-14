@@ -1,13 +1,9 @@
-for x in range(-10,100, 2 ):
+for x in ['192.168.12.1', '192.168.12.254', 1]:
     print("Number x = " + str(x))
-    if x == 42:
+    if x == '192.168.12.254':
         break
+
+    print(x)
 
 print("--------------------off-----------------")
-
-x = 0
-while True:
-    print(x)
-    x = x + 1
-    if x == 100:
-        break
+#ip = int(192.168.12.1)

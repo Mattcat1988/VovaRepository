@@ -4,9 +4,8 @@ while [ $myvar -le 10 ]
 do
 
       echo $myvar
-      # shellcheck disable=SC2004
+      #zz shellcheck disable=SC2004
       myvar=$(($myvar + 1 ))
-      sleep 0.5
+      sleep 1
 done
-
 
