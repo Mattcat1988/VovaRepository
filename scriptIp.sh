@@ -1,11 +1,20 @@
 #!/bin/bash
-myvar=1
-while [ $myvar -le 10 ]
-do
-
-      echo $myvar
-      #zz shellcheck disable=SC2004
-      myvar=$(($myvar + 1 ))
-      sleep 1
+COUNTER=0
+while [ $COUNTER -lt 10 ]; do
+      echo "Current counter is $COUNTER"
+      COUNTER=$(($COUNTER+1))
+      #sleep 0.30
 done
 
+for myfile in `ls *.yml`; do
+  cat "$myfile"
+  done
+
+for x in {1..10}; do
+  echo "x=$x"
+  done
+
+for (( i=1; i<=10; i++)); do
+  echo "Nomer I = $i"
+done
+ping -c 4 "$1"
