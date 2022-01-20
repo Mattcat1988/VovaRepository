@@ -8,6 +8,13 @@ sudo systemctl enable sshd чтобы стартовал при запуске �
 копировать ssh key user в authorized_keys  пользователя root
 ssh-copy-id root@192.168.20.116 копировать ssh ключ на сервер
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@server2
+=====ssh Windows
+install opernssh-server
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+opernssh-server
+ssh-keygen.exe
+201281
 ====== Архиваторы
 tar cf  mytar.tar  Folder1   - заархивировать Folder1
 tar xf mytar.tar  - разархивировать архив
