@@ -5,4 +5,4 @@ echo "==============IP========= adress" >> 'C:\Users\programs.txt'
 ipconfig >> 'C:\Users\programs.txt'
 echo "========Disk Info" >> 'C:\Users\programs.txt'
 Get-PhysicalDisk >> 'C:\Users\programs.txt'
-Get-WmiObject -Class Win32_LogicalDisk
+Get-WmiObject -Class Win32_LogicalDisk >> 'C:\Users\programs.txt'
