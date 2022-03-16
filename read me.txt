@@ -1,0 +1,12 @@
+prometheus query
+simple action
+rate
+sum
+gouge
+count
+4to eto
+
+
+grafana v docker
+добавить дата соурс
+добавить дашборд два графика CPU usage memory usage

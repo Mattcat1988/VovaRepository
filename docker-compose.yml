@@ -1,0 +1,31 @@
+
+services:
+  prometheus:
+    image: ubuntu/prometheus:2.20-20.04_beta
+    environment:
+      - TZ=UTC
+    deploy:
+      mode: global
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 1024M
+    ports:
+      - "30090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  db:
+    image: postgres:12.10
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  exporter:
+    image: bitnami/postgres-exporter:0.10.1
+    environment:
+      - DATA_SOURCE_NAME="postgresql://postgres:example@localhost:5432/postgres?sslmode=disable'
+    ports:
+      - "9187:9187"
+
