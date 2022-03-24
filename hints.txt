@@ -614,6 +614,8 @@ Bit(n), BIT VARYING(n) битовые
 Money Монетарный
 serial значит уникальный
 id serial primary key
+psql -h 192.168.20.70 -U user1 test1c -W способ подключения
+
 =====ORACLE SQL=====
 типы данных
 char(n) символьный формат максимальный размер 2000 байт
