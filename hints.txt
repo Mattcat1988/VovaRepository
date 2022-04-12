@@ -689,6 +689,7 @@ Custom offset managment - exactly once(not missed. no duplicates)
 used: auto.offset.reset
 earliest or latest
 =======CURL======
+curl -LJO "" скачать по ссылке
 https://mcs.mail.ru/blog/10-komand-curl-kotorye-vam-sleduet-znat
 curl инструмент для передачи данных с сервера на сервер
 curl -X GET для запроса API -i получить заголовки
