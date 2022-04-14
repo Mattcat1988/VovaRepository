@@ -97,6 +97,7 @@ ctrl+o сохранить
 
 ======== UFW ======
 ufw фаервол
+sudo firewall-cmd --zone=public --add-port=80/tcp открыть 80 порт на centOS
 sudo ufw status статус фаервола
 sudo ufw app list Список приложений с которыми работает ФВ
 /etc/ufw/applications.d/nginx.ini документ куда снипет вставлять для работы ВФ и nginx
