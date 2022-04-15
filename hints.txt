@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+sudo virsh net-start default  запустить сеть
 ls -lS сортировка файлов по размеру
 ls -lt сортировка по времени модицикации
 ls -lX сортировка по расширению
