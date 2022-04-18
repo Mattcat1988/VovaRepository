@@ -58,6 +58,8 @@ du - посмотреть сколько места занимают файлы 
 df проверка пространства на диске
 fdisk программа для управления разделами диска
 fdisk -l просмотреть разделы
+mount /dev/sdb1 /mnt монтировать раздел
+/etc/fstab редактировать, чтобы раздел сам монтировался
 lscpu посмотреть процессор
 crontab -l    - показать расписание
 crontab -e   - редактировать расписание
@@ -721,3 +723,10 @@ https://github.com/Einsteinish/Docker-Compose-Prometheus-and-Grafana ссылк�
 https://github.com/prometheus/prometheus/releases/download/v2.35.0-rc1/prometheus-2.35.0-rc1.linux-amd64.tar.gz
 https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-amd64.tar.gz
 https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+========URBACKUP=======
+dfisk dev/vdb press n
+t выбрать тип linux 83 w сохранить
+localhost:55414 порт urbackup
+mksf.btrfs /dev/vdb1 выбрать систему для urbackup
+/dev/vdb1 /backup btdfs defaults 0 0 монтирование при автозагрузке fstab
+mount -a чтобы применить fstab
