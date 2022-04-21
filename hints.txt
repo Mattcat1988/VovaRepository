@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+https://crontab.guru/ всякое для crontab
 netstat -tulpen посмотреть порты которые прослушиваются
 sudo virsh net-start default  запустить сеть
 ls -lS сортировка файлов по размеру
@@ -730,3 +731,4 @@ localhost:55414 порт urbackup
 mksf.btrfs /dev/vdb1 выбрать систему для urbackup
 /dev/vdb1 /backup btdfs defaults 0 0 монтирование при автозагрузке fstab
 mount -a чтобы применить fstab
+==========================
