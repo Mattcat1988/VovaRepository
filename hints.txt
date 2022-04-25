@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+https://habr.com/ru/company/ruvds/blog/339820/ набор полезного
 https://crontab.guru/ всякое для crontab
 netstat -tulpen посмотреть порты которые прослушиваются
 sudo virsh net-start default  запустить сеть
