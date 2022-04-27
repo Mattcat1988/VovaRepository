@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+hostnamectl узнать имя системы
 test
 host узнать ip адреса сайта
 route посмотреть какие используются роутеры
