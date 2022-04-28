@@ -29,6 +29,12 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+sudo nmcli conn add type bridge con-name br0 ifname br0 создать мост
+sudo nmcli conn add type ethernet slave-type bridge con-name bridge-br0 ifname enp1s0 master br0 добавить интерфейс
+sudo nmcli conn show --active посмотреть сетевые подключения
+sudo nmcli conn up br0 активировать соеденение
+sudo nmcli conn down Ethernet\ connection\ 1 отключение соеденения
+nmcli администрирование NetworkManager
 network:
   ethernets:
     enp1s0:
