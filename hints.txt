@@ -29,6 +29,18 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+network:
+  ethernets:
+    enp1s0:
+      addresses:
+      - 192.168.122.99/24
+      gateway4: 192.168.122.1
+      nameservers:
+        addresses:
+        - 192.168.30.10
+        search: []
+  version: 2
+Пример рабочего конфига для netplan ubuntu server
 hostnamectl узнать имя системы
 test
 host узнать ip адреса сайта
