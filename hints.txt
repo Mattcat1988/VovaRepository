@@ -123,6 +123,7 @@ sudo apt install python3-distutils
 sudo apt purge <apt> удаление приложения со всеми хвостами
 apt-cache policy найти приложение на пк
 apt-cache search найти приложение в репозитории
+chkcinfig on чтобы все севрисы RedHat стартовали автоматом
 ======== Работа с текстом ======
 ctrl+w найти
 ctrl+o сохранить
