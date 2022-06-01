@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+/etc/apt/sources.list место репозитория
 dmesg сообщение от ядра линукс
 sudo nmcli conn add type bridge con-name br0 ifname br0 создать мост
 sudo nmcli conn add type ethernet slave-type bridge con-name bridge-br0 ifname enp1s0 master br0 добавить интерфейс
