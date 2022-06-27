@@ -72,6 +72,9 @@ journalctl -u ssh посмотреть логи определенной слу�
 journalctl -f смотреть логи в реальном времени
 systemd-analyze общее время загрузки системы
 systemd-analyze blame посмотреть сколько времени загружалась каждая служба
+grep 'warning' /var/log/syslog пример использования grep в логах
+journalctl -p err -b 0
+===========================
 sudo nmcli conn add type bridge con-name br0 ifname br0 создать мост
 sudo nmcli conn add type ethernet slave-type bridge con-name bridge-br0 ifname enp1s0 master br0 добавить интерфейс
 sudo nmcli conn show --active посмотреть сетевые подключения
