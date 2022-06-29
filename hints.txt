@@ -435,6 +435,7 @@ docker run -d --name=nginx nginx:latest  запустить конктейнер
 docker rm --force nginx принудительная остановка и удаление контейнера
 docker run -d -p 80:80 -v /root/default.conf:/etc/nginx/conf.d/default.conf nginx свой конфиг
 :ro режим только для чтения
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes-ru
 
 
 
