@@ -145,6 +145,8 @@ nc -zvw3 192.168.1.8 22
 nc [-options] [HostName or IP] [PortNumber]
 nc -z <host> <port>; echo $?
 nc -zv 192.168.0.1 20-25 сканировать диапазон портов
+dig утилита, предоставляющая пользователю интерфейс командной строки для обращения к системе DNS
+wireshark анализатор пакетов
 nmap для сканирования портов и сети
 nmap [-options] [HostName or IP] [-p] [PortNumber]
 nmap -A -T4 для сканирования портов
