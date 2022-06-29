@@ -842,3 +842,11 @@ LRANGE получить значения списка слева LRANGE mylist 0
 RPUSH
 LPOP взять значение списка слева
 LLEN mylist длинна списка
+ZADD упорядоченное множество ZADD persons 1980 "Vasya"
+ZRANGE список упорядоченного множества ZRANGE persons 0 -1 WITHSCORES
+Транзакция это множество команд, выполняющихся, как одна команда
+MULTI начинает запись команд
+EXEC начать выполнение команд
+DISCARD прервать исполнение транзакции
+SUBSCRIBE подписка SUBSCRIBE news
+PUBLISH публикация PUBLISH news "Hello"
