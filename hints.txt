@@ -854,3 +854,7 @@ EXEC начать выполнение команд
 DISCARD прервать исполнение транзакции
 SUBSCRIBE подписка SUBSCRIBE news
 PUBLISH публикация PUBLISH news "Hello"
+=====Terraform======
+terraform init инициализация конфигурации
+terraform fmt форматировать конфигурацию
+terraform validate проверка конфигурации
