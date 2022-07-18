@@ -859,3 +859,14 @@ terraform init инициализация конфигурации
 terraform fmt форматировать конфигурацию
 terraform validate проверка конфигурации
 terrafotm plan план структуры
+terraform apply запустить структуру
+terraform destroy уничтожить структуру
+variables.tf с содержимым
+variable "container_name" {
+  description = "Value of the name for the Docker container"
+  type        = string
+  default     = "ExampleNginxContainer"
+}
+ для переменных
+заменить переменную на var.container_name в основном манифесте
+terraform apply -var "container_name=YetAnotherName" пример замены одной переменной
