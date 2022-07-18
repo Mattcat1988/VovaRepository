@@ -858,3 +858,4 @@ PUBLISH публикация PUBLISH news "Hello"
 terraform init инициализация конфигурации
 terraform fmt форматировать конфигурацию
 terraform validate проверка конфигурации
+terrafotm plan план структуры
