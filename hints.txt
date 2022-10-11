@@ -29,6 +29,8 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+tune2fs -l /dev/<sda2> посмотреть текущще количество inode inode count
+df -i inode
  /opt/1cv8/x86_64/8.3.18.1483/rac infobase create --create-database --name=test1c --dbms=PostgreSQL --db-server=localhost --db-name=testo1c --db-user=user1 --db-pwd=user12345 --cluster=0af8f0de-ff5b-41b4-9c1b-1f7cad289a95 --locale=ru
 создание базы данных 1с
 sha256sum контрольная сумма
