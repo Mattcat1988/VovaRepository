@@ -798,6 +798,13 @@ curl --data '{"param1":"test1","param2":"test2"}' \http://www.test.com  запр
 curl -X DELETE удалить, что-то
 curl -k игнорирование ошибки неправильных сертификатов
 curl -u <user:password> https://my-test-api.com/endpoint1 использование авторизации
+curl -L vk.com идти за сайтом если переехал
+curl -v получить больше информации о сайте
+curl -v --user-agent chromium vk.com сделать запрос от другого агента
+curl -L adv-it.net/kaka.jpg --output myfile.jpg сохранить файл с сайта
+curl -s https://api.astahanov.net -d '{'username' : "Sasha", "password" : "12345"}' | jq Отправить запрос JSON 
+curl -s https://api.astahanov.net -d @myfile.json | jq послать данные из файла
+curl -s https://api.astahanov.net -d @myfile.json | jq .runtime --raw-output убрать кавычки из запроса или -r
 =======Zabbix=====
 apt-get install zabbix-agent для установки zabbix agent
 service zabbix-agent start для запуска zabbix-agent
