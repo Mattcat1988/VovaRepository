@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+scanimage -T тест сканера
 mkfs -t ext4 -N 300000 /dev/sda2 указать файлово системе диска количество inode
 tune2fs -l /dev/<sda2> посмотреть текущще количество inode inode count
 df -i inode
