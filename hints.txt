@@ -883,3 +883,10 @@ variable "container_name" {
  для переменных
 заменить переменную на var.container_name в основном манифесте
 terraform apply -var "container_name=YetAnotherName" пример замены одной переменной
+======SED=======
+sed options file - схема sed
+echo "This is a test" | sed 's/test/another test/' простой пример sed
+s - команда замены
+-e для обработки нескольких действий
+sed -e 's/This/That/; s/test/another test/'
+-f чтение команд из файла
