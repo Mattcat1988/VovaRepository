@@ -910,3 +910,7 @@ i\ добавляет перед заданной строкой a\ добавл
 echo "second test" | sed 'i\five text'
 sed '2c\Another text' <file> заменить строку
 sed '/templest/c changed text' использовать шаблон или регулярное выражение
+sed 'y/123/567/' <file> заменитяет символы согласно выбранным шаблонам.
+sed '=' <file> посмотреть число строк в потоке. sed -n '/test/=' <file> вывести только номера
+sed '3r <file>' <target file> вставить содержимое файла в поток после третьей строки.
+sed '/test/r newfile' myfile пример например
