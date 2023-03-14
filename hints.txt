@@ -29,6 +29,7 @@ zip –r myZIP.zip Folder1   - Запаковать Folder1 в ZIP
 unzip myZIP.zip                - Распаковать файл myZIP.zip
 
 ========== Разное ==========
+rsync -rtuv /path/to/dir_a/* /path/to/dir_b синхронизация папок
 rpm2cpio <имя пакета.rpm> | cpio -idmv распаковка пакета без установки
 ldd <имя библиотеки> Проверить зависимость библиотеки
 scanimage -T тест сканера
