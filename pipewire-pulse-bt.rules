@@ -1,0 +1,10 @@
+#
+# /etc/udev/rules.d/pipewire-pulse-bt.rules
+#
+# phys: bt controller mac
+# name: bt device name
+SUBSYSTEM=="input",ATTR{id/vendor}=="05d6",ATTR{id/product}=="000a",ATTR{name}=="HOCO E15 (AVRCP)",ACTION=="add",TAG+="systemd",ENV{SYSTEMD_USER_WANTS}+="pipewire-pulse-bt-profile-switch.service"
+#
+SUBSYSTEM=="input",ATTR{id/vendor}=="000a",ATTR{id/product}=="ffff",ATTR{name}=="K10C (AVRCP)",ACTION=="add",TAG+="systemd",ENV{SYSTEMD_USER_WANTS}+="pipewire-pulse-bt-profile-switch.service"
+#
+SUBSYSTEM=="input",ATTR{id/vendor}=="0075",ATTR{id/product}=="a013",ATTR{name}=="Galaxy Buds Live (4FAB) (AVRCP)",ACTION=="add",TAG+="systemd",ENV{SYSTEMD_USER_WANTS}+="pipewire-pulse-bt-profile-switch.service"
