@@ -953,3 +953,6 @@ echo "test" | awk  '/t[ae]{1,2}st/{print $0}' пример с классами �
 Пример echo "This is an exam" | awk '/test|exam/{print $0}'
 echo "Linderman" | awk '/Linder(man)?/{print $0}' пример группировки в крулхы скобках
 :nohlsearch #vim снять выделение
+systemctl set-default multi-user.target Отключить GUI
+systemctl set-default graphical.target Включить GUI
+service gdm restart Перезагрузка gnome
