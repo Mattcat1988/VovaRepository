@@ -958,3 +958,9 @@ systemctl set-default graphical.target Включить GUI
 service gdm restart Перезагрузка gnome
 strace -o вывод данных в файл
 strace -e trace=stat <app> фильтр
+=======Kubernetes=====
+kubectl apply -f <file.yaml> Развернуть кластер
+kubectl delete -f <file.yaml> удалить кластер
+kubectl logs [pod name] логи пода
+kubectl exec -it [pod name] --/bin/bash зайти в контейнер интерактивно
+kubectl get pods, nodes, deployment 
