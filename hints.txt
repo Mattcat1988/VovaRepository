@@ -964,3 +964,4 @@ kubectl delete -f <file.yaml> удалить кластер
 kubectl logs [pod name] логи пода
 kubectl exec -it [pod name] --/bin/bash зайти в контейнер интерактивно
 kubectl get pods, nodes, deployment 
+kubectl describe pod [pod name] посмотреть описание пода
