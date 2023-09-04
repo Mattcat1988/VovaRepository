@@ -958,3 +958,14 @@ systemctl set-default graphical.target Включить GUI
 service gdm restart Перезагрузка gnome
 strace -o вывод данных в файл
 strace -e trace=stat <app> фильтр
+======BUILD RPM PACK
+rpmdev-setuptree Создать дерево для сборки RPM пакетов в home
+rpmdev-diff Показать разницу двух архивов
+rpmdev-newspec Создать шаблон spec файла
+rpmdev-rmdevelrpms найти и удалить все RPM модули разраercmботки
+rpminfo Печать информациии об исполняемых файлах
+rpmdev-md5 Контрольная сумма
+rpmdev-vercmp Средство проверки сравнения версий RPM
+spectool Развернуть и загрузить исходные тексты и исправления в специальных файлах
+rpmdev-wipetree Удалить все файлы в каталогах созданных rpmdev-setuptree
+rpmdev-extract извлечь архивы tar xvf
