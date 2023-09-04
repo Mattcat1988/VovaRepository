@@ -958,6 +958,7 @@ systemctl set-default graphical.target Включить GUI
 service gdm restart Перезагрузка gnome
 strace -o вывод данных в файл
 strace -e trace=stat <app> фильтр
+<<<<<<< HEAD
 ======BUILD RPM PACK
 rpmdev-setuptree Создать дерево для сборки RPM пакетов в home
 rpmdev-diff Показать разницу двух архивов
@@ -969,3 +970,12 @@ rpmdev-vercmp Средство проверки сравнения версий 
 spectool Развернуть и загрузить исходные тексты и исправления в специальных файлах
 rpmdev-wipetree Удалить все файлы в каталогах созданных rpmdev-setuptree
 rpmdev-extract извлечь архивы tar xvf
+=======
+=======Kubernetes=====
+kubectl apply -f <file.yaml> Развернуть кластер
+kubectl delete -f <file.yaml> удалить кластер
+kubectl logs [pod name] логи пода
+kubectl exec -it [pod name] --/bin/bash зайти в контейнер интерактивно
+kubectl get pods, nodes, deployment 
+kubectl describe pod [pod name] посмотреть описание пода
+>>>>>>> 8437c32044efe7484d8b748471625c2b4c9b9d34
