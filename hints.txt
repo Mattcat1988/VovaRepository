@@ -960,6 +960,8 @@ strace -o вывод данных в файл
 strace -e trace=stat <app> фильтр
 <<<<<<< HEAD
 ======BUILD RPM PACK
+rpm --eval '%{_rpmdir}' посмотреть макрос
+rpm -qpR package.rpm посмотреть зависимости пакета
 rpmdev-setuptree Создать дерево для сборки RPM пакетов в home
 rpmdev-diff Показать разницу двух архивов
 rpmdev-newspec Создать шаблон spec файла
