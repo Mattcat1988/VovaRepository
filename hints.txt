@@ -130,6 +130,7 @@ ps aux расширенный список запущенных процессо
 sudo apt-get clean очистить кэш архива apt
 sudo apt-get autoclean
 apt-get autoremove
+grep -r docker /etc/ 2> /dev/null Пример вывода потока ошибок в нулевое устройство
 shutdown -h +1 выключить пк через 1 минуту
 dpkg –i                - установить программу из файла .deb
 dpkg –r                - удалить программу
